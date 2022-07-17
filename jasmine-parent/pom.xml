@@ -7,12 +7,12 @@
 
   <parent>
     <groupId>doodle.jasmine</groupId>
-    <artifactId>doodle-jasmine</artifactId>
+    <artifactId>jasmine</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
-  <artifactId>build-parent</artifactId>
+  <artifactId>jasmine-parent</artifactId>
   <packaging>pom</packaging>
 
   <properties>
@@ -22,8 +22,8 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>doodle</groupId>
-        <artifactId>doodle-jasmine-bom</artifactId>
+        <groupId>doodle.jasmine</groupId>
+        <artifactId>jasmine-bom</artifactId>
         <version>${project.version}</version>
         <type>pom</type>
         <scope>import</scope>

@@ -7,18 +7,18 @@
 
   <parent>
     <groupId>doodle.jasmine</groupId>
-    <artifactId>buildtools</artifactId>
+    <artifactId>jasmine-build</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <relativePath>buildtools/pom.xml</relativePath>
+    <relativePath>jasmine-build/pom.xml</relativePath>
   </parent>
 
-  <artifactId>doodle-jasmine</artifactId>
+  <artifactId>jasmine</artifactId>
   <packaging>pom</packaging>
 
   <modules>
-    <module>bom</module>
-    <module>buildtools</module>
-    <module>build-parent</module>
+    <module>jasmine-bom</module>
+    <module>jasmine-build</module>
+    <module>jasmine-parent</module>
   </modules>
 
 </project>
