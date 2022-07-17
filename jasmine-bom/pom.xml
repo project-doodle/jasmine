@@ -54,6 +54,26 @@
         <artifactId>jasmine-starter-workflow-ops-server</artifactId>
         <version>${project.version}</version>
       </dependency>
+      <dependency>
+        <groupId>doodle.jasmine</groupId>
+        <artifactId>jasmine-component-login-client</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>doodle.jasmine</groupId>
+        <artifactId>jasmine-component-login-server</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>doodle.jasmine</groupId>
+        <artifactId>jasmine-starter-component-login-client</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>doodle.jasmine</groupId>
+        <artifactId>jasmine-starter-component-login-server</artifactId>
+        <version>${project.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 

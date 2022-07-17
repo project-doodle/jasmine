@@ -7,21 +7,17 @@
 
   <parent>
     <groupId>doodle.jasmine</groupId>
-    <artifactId>jasmine-build</artifactId>
+    <artifactId>jasmine-component</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <relativePath>jasmine-build/pom.xml</relativePath>
+    <relativePath>../pom.xml</relativePath>
   </parent>
 
-  <artifactId>jasmine</artifactId>
+  <artifactId>jasmine-component-login</artifactId>
   <packaging>pom</packaging>
 
   <modules>
-    <module>jasmine-bom</module>
-    <module>jasmine-build</module>
-    <module>jasmine-component</module>
-    <module>jasmine-parent</module>
-    <module>jasmine-starters</module>
-    <module>jasmine-workflow</module>
+    <module>jasmine-component-login-client</module>
+    <module>jasmine-component-login-server</module>
   </modules>
 
 </project>
