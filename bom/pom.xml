@@ -12,21 +12,27 @@
     <relativePath>../pom.xml</relativePath>
   </parent>
 
-  <artifactId>doodle-jasmine-parent</artifactId>
+  <artifactId>bom</artifactId>
   <packaging>pom</packaging>
 
   <properties>
-    <maven.deploy.skip>false</maven.deploy.skip>
+    <dep.spring-boot.version>2.5.1</dep.spring-boot.version>
+    <dep.guava.version>30.0-jre</dep.guava.version>
   </properties>
 
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>doodle</groupId>
-        <artifactId>doodle-jasmine-bom</artifactId>
-        <version>${project.version}</version>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>${dep.spring-boot.version}</version>
         <type>pom</type>
         <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>${dep.guava.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>

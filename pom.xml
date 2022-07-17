@@ -16,9 +16,9 @@
   <packaging>pom</packaging>
 
   <modules>
-    <module>doodle-jasmine-bom</module>
-    <module>doodle-jasmine-build</module>
-    <module>doodle-jasmine-parent</module>
+    <module>bom</module>
+    <module>buildtools</module>
+    <module>build-parent</module>
   </modules>
 
 </project>
