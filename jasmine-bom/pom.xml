@@ -76,6 +76,26 @@
       </dependency>
       <dependency>
         <groupId>doodle.jasmine</groupId>
+        <artifactId>jasmine-workflow-console-client</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>doodle.jasmine</groupId>
+        <artifactId>jasmine-workflow-console-server</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>doodle.jasmine</groupId>
+        <artifactId>jasmine-starter-workflow-console-client</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>doodle.jasmine</groupId>
+        <artifactId>jasmine-starter-workflow-console-server</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>doodle.jasmine</groupId>
         <artifactId>jasmine-workflow-ops-client</artifactId>
         <version>${project.version}</version>
       </dependency>

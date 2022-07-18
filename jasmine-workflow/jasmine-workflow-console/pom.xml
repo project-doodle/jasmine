@@ -7,21 +7,17 @@
 
   <parent>
     <groupId>doodle.jasmine</groupId>
-    <artifactId>jasmine-parent</artifactId>
+    <artifactId>jasmine-workflow</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <relativePath>../jasmine-parent/pom.xml</relativePath>
+    <relativePath>../pom.xml</relativePath>
   </parent>
 
-  <artifactId>jasmine-workflow</artifactId>
+  <artifactId>jasmine-workflow-console</artifactId>
   <packaging>pom</packaging>
 
-  <properties>
-    <parameter.spotless.license>${project.basedir}/../../../checkstyle/license-header.txt</parameter.spotless.license>
-  </properties>
-
   <modules>
-    <module>jasmine-workflow-console</module>
-    <module>jasmine-workflow-ops</module>
+    <module>jasmine-workflow-console-client</module>
+    <module>jasmine-workflow-console-server</module>
   </modules>
 
 </project>
