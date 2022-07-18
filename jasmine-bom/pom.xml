@@ -36,26 +36,6 @@
       </dependency>
       <dependency>
         <groupId>doodle.jasmine</groupId>
-        <artifactId>jasmine-workflow-ops-client</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>doodle.jasmine</groupId>
-        <artifactId>jasmine-workflow-ops-server</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>doodle.jasmine</groupId>
-        <artifactId>jasmine-starter-workflow-ops-client</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>doodle.jasmine</groupId>
-        <artifactId>jasmine-starter-workflow-ops-server</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>doodle.jasmine</groupId>
         <artifactId>jasmine-component-login-client</artifactId>
         <version>${project.version}</version>
       </dependency>
@@ -72,6 +52,46 @@
       <dependency>
         <groupId>doodle.jasmine</groupId>
         <artifactId>jasmine-starter-component-login-server</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>doodle.jasmine</groupId>
+        <artifactId>jasmine-component-pay-client</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>doodle.jasmine</groupId>
+        <artifactId>jasmine-component-pay-server</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>doodle.jasmine</groupId>
+        <artifactId>jasmine-starter-component-pay-client</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>doodle.jasmine</groupId>
+        <artifactId>jasmine-starter-component-pay-server</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>doodle.jasmine</groupId>
+        <artifactId>jasmine-workflow-ops-client</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>doodle.jasmine</groupId>
+        <artifactId>jasmine-workflow-ops-server</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>doodle.jasmine</groupId>
+        <artifactId>jasmine-starter-workflow-ops-client</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>doodle.jasmine</groupId>
+        <artifactId>jasmine-starter-workflow-ops-server</artifactId>
         <version>${project.version}</version>
       </dependency>
     </dependencies>

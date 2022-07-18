@@ -18,6 +18,8 @@
   <modules>
     <module>jasmine-starter-component-login-client</module>
     <module>jasmine-starter-component-login-server</module>
+    <module>jasmine-starter-component-pay-client</module>
+    <module>jasmine-starter-component-pay-server</module>
     <module>jasmine-starter-workflow-ops-client</module>
     <module>jasmine-starter-workflow-ops-server</module>
   </modules>
