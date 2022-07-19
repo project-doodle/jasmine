@@ -18,18 +18,22 @@ package doodle.jasmine.sbe.thinkingdatasdk.tga.config;
 import static doodle.jasmine.sbe.thinkingdatasdk.tga.TGAConstants.PREFIX;
 
 import cn.thinkingdata.tga.javasdk.Consumer;
+import cn.thinkingdata.tga.javasdk.DynamicSuperPropertiesTracker;
 import cn.thinkingdata.tga.javasdk.ThinkingDataAnalytics;
 import doodle.jasmine.sbe.thinkingdatasdk.tga.conditon.ConditionalOnConsumerBatch;
 import doodle.jasmine.sbe.thinkingdatasdk.tga.conditon.ConditionalOnConsumerDebug;
 import doodle.jasmine.sbe.thinkingdatasdk.tga.conditon.ConditionalOnConsumerLogging;
 import java.net.URISyntaxException;
+import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.event.ContextClosedEvent;
 
 @SpringBootConfiguration(proxyBeanMethods = false)
 @ConditionalOnBean(TGAMarkerConfiguration.Marker.class)
@@ -63,7 +67,18 @@ public class TGAAutoConfiguration {
 
   @Bean
   @ConditionalOnMissingBean
-  public ThinkingDataAnalytics thinkingDataAnalytics(Consumer consumer, TGAProperties properties) {
-    return new ThinkingDataAnalytics(consumer, properties.isEnableUUID());
+  public ThinkingDataAnalytics thinkingDataAnalytics(
+      TGAProperties properties,
+      Consumer consumer,
+      ObjectProvider<DynamicSuperPropertiesTracker> trackerProvider) {
+    ThinkingDataAnalytics tga = new ThinkingDataAnalytics(consumer, properties.isEnableUUID());
+    tga.setDynamicSuperPropertiesTracker(trackerProvider.getIfUnique());
+    return tga;
+  }
+
+  @Bean
+  public ApplicationListener<ContextClosedEvent> tgaContextClosedEventListener(
+      ThinkingDataAnalytics tga) {
+    return (ignored) -> tga.close();
   }
 }
