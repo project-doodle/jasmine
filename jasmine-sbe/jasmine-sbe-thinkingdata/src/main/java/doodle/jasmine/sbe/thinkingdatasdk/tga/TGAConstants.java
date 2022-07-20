@@ -15,6 +15,8 @@
  */
 package doodle.jasmine.sbe.thinkingdatasdk.tga;
 
+import static doodle.jasmine.sbe.thinkingdatasdk.tga.TGAConsumerType.DEBUG;
+
 import lombok.experimental.UtilityClass;
 
 @UtilityClass
@@ -23,9 +25,7 @@ public final class TGAConstants {
 
   public static final String DEFAULT_SERVER_URI = "https://global-receiver-ta.thinkingdata.cn";
   public static final boolean DEFAULT_ENABLE_UUID = false;
-  public static final TGAConsumerType DEFAULT_CONSUMER_TYPE = TGAConsumerType.LOGGING;
-
+  public static final TGAConsumerType DEFAULT_CONSUMER_TYPE = DEBUG;
   public static final boolean DEFAULT_DEBUG_WRITE_DATA = false;
-
   public static final String DEFAULT_LOGGING_LOG_DIRECTORY = ".logs/tga";
 }

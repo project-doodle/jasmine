@@ -20,9 +20,9 @@ import static doodle.jasmine.sbe.thinkingdatasdk.tga.TGAConstants.PREFIX;
 import cn.thinkingdata.tga.javasdk.Consumer;
 import cn.thinkingdata.tga.javasdk.DynamicSuperPropertiesTracker;
 import cn.thinkingdata.tga.javasdk.ThinkingDataAnalytics;
-import doodle.jasmine.sbe.thinkingdatasdk.tga.conditon.ConditionalOnConsumerBatch;
-import doodle.jasmine.sbe.thinkingdatasdk.tga.conditon.ConditionalOnConsumerDebug;
-import doodle.jasmine.sbe.thinkingdatasdk.tga.conditon.ConditionalOnConsumerLogging;
+import cn.thinkingdata.tga.javasdk.ThinkingDataAnalytics.BatchConsumer;
+import cn.thinkingdata.tga.javasdk.ThinkingDataAnalytics.DebugConsumer;
+import cn.thinkingdata.tga.javasdk.ThinkingDataAnalytics.LoggerConsumer;
 import java.net.URISyntaxException;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.boot.SpringBootConfiguration;
@@ -44,25 +44,20 @@ public class TGAAutoConfiguration {
 
   @Bean
   @ConditionalOnMissingBean
-  @ConditionalOnConsumerDebug
-  public Consumer tgaDebugConsumer(TGAProperties properties) throws URISyntaxException {
-    return new ThinkingDataAnalytics.DebugConsumer(
-        properties.getServerUri(), properties.getAppId(), properties.getDebug().isWriteData());
-  }
-
-  @Bean
-  @ConditionalOnMissingBean
-  @ConditionalOnConsumerLogging
-  public Consumer tgaLoggingConsumer(TGAProperties properties) {
-    return new ThinkingDataAnalytics.LoggerConsumer(properties.getLogging());
-  }
-
-  @Bean
-  @ConditionalOnMissingBean
-  @ConditionalOnConsumerBatch
-  public Consumer tgaBatchConsumer(TGAProperties properties) throws URISyntaxException {
-    return new ThinkingDataAnalytics.BatchConsumer(
-        properties.getServerUri(), properties.getAppId(), properties.getBatch());
+  public Consumer thinkingDataAnalyticsConsumer(TGAProperties properties)
+      throws URISyntaxException {
+    switch (properties.getConsumerType()) {
+      case DEBUG:
+        return new DebugConsumer(
+            properties.getServerUri(), properties.getAppId(), properties.getDebug().isWriteData());
+      case LOGGING:
+        return new LoggerConsumer(properties.getLogging());
+      case BATCH:
+        return new BatchConsumer(
+            properties.getServerUri(), properties.getAppId(), properties.getBatch());
+      default:
+        throw new Error();
+    }
   }
 
   @Bean
