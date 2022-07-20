@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package doodle.jasmine.sbe.thinkingdatasdk.tga.config;
+package doodle.jasmine.sbe.thinkingdata.tga.config;
 
-import static doodle.jasmine.sbe.thinkingdatasdk.tga.TGAConstants.PREFIX;
+import static doodle.jasmine.sbe.thinkingdata.tga.TGAConstants.PREFIX;
 
 import cn.thinkingdata.tga.javasdk.Consumer;
 import cn.thinkingdata.tga.javasdk.DynamicSuperPropertiesTracker;

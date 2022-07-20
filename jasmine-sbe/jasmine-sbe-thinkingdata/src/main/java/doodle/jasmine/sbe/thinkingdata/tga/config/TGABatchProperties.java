@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package doodle.jasmine.sbe.thinkingdatasdk.tga;
+package doodle.jasmine.sbe.thinkingdata.tga.config;
 
-public enum TGAConsumerType {
-  DEBUG,
-  LOGGING,
-  BATCH;
-}
+import cn.thinkingdata.tga.javasdk.ThinkingDataAnalytics;
+import lombok.Data;
+
+@Data
+public class TGABatchProperties extends ThinkingDataAnalytics.BatchConsumer.Config {}

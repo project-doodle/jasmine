@@ -13,15 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package doodle.jasmine.sbe.thinkingdatasdk.tga.config;
+package doodle.jasmine.sbe.thinkingdata.tga.config;
 
-import static doodle.jasmine.sbe.thinkingdatasdk.tga.TGAConstants.DEFAULT_LOGGING_LOG_DIRECTORY;
+import org.springframework.boot.SpringBootConfiguration;
+import org.springframework.context.annotation.Bean;
 
-import cn.thinkingdata.tga.javasdk.ThinkingDataAnalytics;
+@SpringBootConfiguration(proxyBeanMethods = false)
+public class TGAMarkerConfiguration {
 
-public class TGALoggingProperties extends ThinkingDataAnalytics.LoggerConsumer.Config {
-
-  public TGALoggingProperties() {
-    super(DEFAULT_LOGGING_LOG_DIRECTORY);
+  @Bean
+  public Marker tgaEnableMarker() {
+    return new Marker();
   }
+
+  class Marker {}
 }

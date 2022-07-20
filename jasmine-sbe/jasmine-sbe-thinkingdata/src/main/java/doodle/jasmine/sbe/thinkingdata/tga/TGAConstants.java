@@ -13,13 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package doodle.jasmine.sbe.thinkingdatasdk.tga.config;
+package doodle.jasmine.sbe.thinkingdata.tga;
 
-import static doodle.jasmine.sbe.thinkingdatasdk.tga.TGAConstants.DEFAULT_DEBUG_WRITE_DATA;
+import lombok.experimental.UtilityClass;
 
-import lombok.Data;
+@UtilityClass
+public final class TGAConstants {
+  public static final String PREFIX = "doodle.jasmine.sbe.thinkingdatasdk.tga";
 
-@Data
-public class TGADebugProperties {
-  private boolean writeData = DEFAULT_DEBUG_WRITE_DATA;
+  public static final String DEFAULT_SERVER_URI = "https://global-receiver-ta.thinkingdata.cn";
+  public static final boolean DEFAULT_ENABLE_UUID = false;
+  public static final TGAConsumerType DEFAULT_CONSUMER_TYPE = TGAConsumerType.DEBUG;
+  public static final boolean DEFAULT_DEBUG_WRITE_DATA = false;
+  public static final String DEFAULT_LOGGING_LOG_DIRECTORY = ".logs/tga";
 }

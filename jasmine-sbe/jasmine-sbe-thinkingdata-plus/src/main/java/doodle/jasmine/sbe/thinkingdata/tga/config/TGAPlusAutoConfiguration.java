@@ -20,7 +20,6 @@ import cn.thinkingdata.tga.javasdk.ThinkingDataAnalytics;
 import doodle.jasmine.sbe.thinkingdata.tga.TGAPlusDynamicSuperPropertiesTracker;
 import doodle.jasmine.sbe.thinkingdata.tga.TGAPlusOpaqueContext;
 import doodle.jasmine.sbe.thinkingdata.tga.TGAPlusTracker;
-import doodle.jasmine.sbe.thinkingdatasdk.tga.config.TGAAutoConfiguration;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
@@ -35,7 +34,7 @@ public class TGAPlusAutoConfiguration {
 
   @Bean
   @ConditionalOnMissingBean
-  public DynamicSuperPropertiesTracker taDynamicSuperPropertiesTracker(
+  public DynamicSuperPropertiesTracker tgaDynamicSuperPropertiesTracker(
       ObjectProvider<TGAPlusDynamicSuperPropertiesTracker> trackerProvider) {
     return () ->
         trackerProvider

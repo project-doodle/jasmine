@@ -13,18 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package doodle.jasmine.sbe.thinkingdatasdk.tga.config;
+package doodle.jasmine.sbe.thinkingdata.tga;
 
-import org.springframework.boot.SpringBootConfiguration;
-import org.springframework.context.annotation.Bean;
+import doodle.jasmine.sbe.thinkingdata.tga.config.TGAMarkerConfiguration;
+import java.lang.annotation.*;
+import org.springframework.context.annotation.Import;
 
-@SpringBootConfiguration(proxyBeanMethods = false)
-public class TGAMarkerConfiguration {
-
-  @Bean
-  public Marker tgaEnableMarker() {
-    return new Marker();
-  }
-
-  class Marker {}
-}
+@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@Import(TGAMarkerConfiguration.class)
+public @interface EnableThinkingDataAnalytics {}

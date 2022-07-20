@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package doodle.jasmine.sbe.thinkingdatasdk.tga.config;
+package doodle.jasmine.sbe.thinkingdata.tga.config;
 
-import static doodle.jasmine.sbe.thinkingdatasdk.tga.TGAConstants.*;
+import static doodle.jasmine.sbe.thinkingdata.tga.TGAConstants.*;
 
-import doodle.jasmine.sbe.thinkingdatasdk.tga.TGAConsumerType;
+import doodle.jasmine.sbe.thinkingdata.tga.TGAConsumerType;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

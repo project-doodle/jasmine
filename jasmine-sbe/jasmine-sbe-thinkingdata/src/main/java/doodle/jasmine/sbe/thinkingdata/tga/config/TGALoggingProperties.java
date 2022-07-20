@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package doodle.jasmine.sbe.thinkingdatasdk.tga;
+package doodle.jasmine.sbe.thinkingdata.tga.config;
 
-import doodle.jasmine.sbe.thinkingdatasdk.tga.config.TGAMarkerConfiguration;
-import java.lang.annotation.*;
-import org.springframework.context.annotation.Import;
+import cn.thinkingdata.tga.javasdk.ThinkingDataAnalytics;
+import doodle.jasmine.sbe.thinkingdata.tga.TGAConstants;
 
-@Target(ElementType.TYPE)
-@Retention(RetentionPolicy.RUNTIME)
-@Documented
-@Import(TGAMarkerConfiguration.class)
-public @interface EnableThinkingDataAnalytics {}
+public class TGALoggingProperties extends ThinkingDataAnalytics.LoggerConsumer.Config {
+
+  public TGALoggingProperties() {
+    super(TGAConstants.DEFAULT_LOGGING_LOG_DIRECTORY);
+  }
+}
