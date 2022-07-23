@@ -18,9 +18,9 @@ package doodle.jasmine.sbe.info;
 import java.util.Properties;
 import org.springframework.boot.info.InfoProperties;
 
-public class HostProperties extends InfoProperties {
+public class JavaProperties extends InfoProperties {
 
-  public HostProperties(Properties entries) {
+  public JavaProperties(Properties entries) {
     super(entries);
   }
 }

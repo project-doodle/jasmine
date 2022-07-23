@@ -15,10 +15,42 @@
  */
 package doodle.jasmine.sbe.info.config;
 
+import doodle.jasmine.sbe.info.JavaProperties;
+import doodle.jasmine.sbe.info.OsProperties;
+import doodle.jasmine.sbe.info.SystemProperties;
+import doodle.jasmine.sbe.info.UserProperties;
+import doodle.jasmine.sbe.info.util.InfoPropertiesUtil;
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootConfiguration(proxyBeanMethods = false)
 @AutoConfigureAfter(ProjectInfoAutoConfiguration.class)
-public class InfoAutoConfiguration {}
+public class InfoAutoConfiguration {
+
+  @Bean
+  @ConditionalOnMissingBean
+  public SystemProperties systemProperties() {
+    return new SystemProperties(System.getProperties());
+  }
+
+  @Bean
+  @ConditionalOnMissingBean
+  public JavaProperties javaProperties(SystemProperties properties) {
+    return new JavaProperties(InfoPropertiesUtil.filtering(properties, "JAVA"));
+  }
+
+  @Bean
+  @ConditionalOnMissingBean
+  public OsProperties osProperties(SystemProperties properties) {
+    return new OsProperties(InfoPropertiesUtil.filtering(properties, "OS"));
+  }
+
+  @Bean
+  @ConditionalOnMissingBean
+  public UserProperties userProperties(SystemProperties properties) {
+    return new UserProperties(InfoPropertiesUtil.filtering(properties, "USER"));
+  }
+}
