@@ -1,0 +1,14 @@
+site_name: 'Jasmine'
+repo_name: 'jasmine'
+edit_uri: 'edit/main/docs'
+site_url: 'https://project-jasmine.github.io/jasmine'
+repo_url: 'https://github.com/project-jasmine/jasmine'
+site_author: 'Tingyan Shen'
+
+copyright: 'Copyright &copy; 2022-present Doodle. All rights reserved.'
+
+theme:
+  name: 'material'
+
+nav:
+  - Home: 'README.md'
