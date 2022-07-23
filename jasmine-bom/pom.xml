@@ -130,16 +130,6 @@
         <artifactId>jasmine-starter-sbe-thinkingdata</artifactId>
         <version>${project.version}</version>
       </dependency>
-      <dependency>
-        <groupId>doodle.jasmine</groupId>
-        <artifactId>jasmine-sbe-thinkingdata-plus</artifactId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>doodle.jasmine</groupId>
-        <artifactId>jasmine-starter-sbe-thinkingdata-plus</artifactId>
-        <version>${project.version}</version>
-      </dependency>
     </dependencies>
   </dependencyManagement>
 

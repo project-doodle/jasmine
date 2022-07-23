@@ -13,13 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package doodle.jasmine.sbe.thinkingdata.tga.config;
+package doodle.jasmine.sbe.thinkingdata.tga.plus.config;
 
 import cn.thinkingdata.tga.javasdk.DynamicSuperPropertiesTracker;
 import cn.thinkingdata.tga.javasdk.ThinkingDataAnalytics;
-import doodle.jasmine.sbe.thinkingdata.tga.TGAPlusDynamicSuperPropertiesTracker;
-import doodle.jasmine.sbe.thinkingdata.tga.TGAPlusOpaqueContext;
-import doodle.jasmine.sbe.thinkingdata.tga.TGAPlusTracker;
+import doodle.jasmine.sbe.thinkingdata.tga.config.TGAAutoConfiguration;
+import doodle.jasmine.sbe.thinkingdata.tga.plus.TGAPlusDynamicSuperPropertiesTracker;
+import doodle.jasmine.sbe.thinkingdata.tga.plus.TGAPlusOpaqueContext;
+import doodle.jasmine.sbe.thinkingdata.tga.plus.TGAPlusTracker;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;

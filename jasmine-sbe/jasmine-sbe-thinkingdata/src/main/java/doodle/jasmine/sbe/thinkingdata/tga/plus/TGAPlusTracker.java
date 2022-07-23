@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package doodle.jasmine.sbe.thinkingdata.tga;
+package doodle.jasmine.sbe.thinkingdata.tga.plus;
 
 import cn.thinkingdata.tga.javasdk.ThinkingDataAnalytics;
 import java.util.Map;

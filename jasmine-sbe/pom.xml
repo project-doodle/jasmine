@@ -21,7 +21,6 @@
 
   <modules>
     <module>jasmine-sbe-thinkingdata</module>
-    <module>jasmine-sbe-thinkingdata-plus</module>
   </modules>
 
 </project>
