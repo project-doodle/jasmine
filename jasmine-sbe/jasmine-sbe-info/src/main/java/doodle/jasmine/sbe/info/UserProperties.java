@@ -15,6 +15,8 @@
  */
 package doodle.jasmine.sbe.info;
 
+import static doodle.jasmine.sbe.info.WellKnownKeys.*;
+
 import java.util.Properties;
 import org.springframework.boot.info.InfoProperties;
 
@@ -22,5 +24,17 @@ public class UserProperties extends InfoProperties {
 
   public UserProperties(Properties entries) {
     super(entries);
+  }
+
+  public String getName() {
+    return get(USER_NAME);
+  }
+
+  public String getHome() {
+    return get(USER_HOME);
+  }
+
+  public String getDir() {
+    return get(USER_DIR);
   }
 }

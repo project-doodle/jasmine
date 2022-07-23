@@ -15,6 +15,8 @@
  */
 package doodle.jasmine.sbe.info;
 
+import static doodle.jasmine.sbe.info.WellKnownKeys.*;
+
 import java.util.Properties;
 import org.springframework.boot.info.InfoProperties;
 
@@ -22,5 +24,17 @@ public class OsProperties extends InfoProperties {
 
   public OsProperties(Properties entries) {
     super(entries);
+  }
+
+  public String getName() {
+    return get(OS_NAME);
+  }
+
+  public String getArch() {
+    return get(OS_ARCH);
+  }
+
+  public String getVersion() {
+    return get(OS_VERSION);
   }
 }
