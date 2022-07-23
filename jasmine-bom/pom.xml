@@ -17,6 +17,7 @@
 
   <properties>
     <dep.spring-boot.version>2.5.1</dep.spring-boot.version>
+    <dep.doodle-broker.version>0.0.1-SNAPSHOT</dep.doodle-broker.version>
     <dep.guava.version>30.0-jre</dep.guava.version>
     <dep.thinkingdatasdk.version>2.0.2</dep.thinkingdatasdk.version>
   </properties>
@@ -27,6 +28,13 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>
         <version>${dep.spring-boot.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>doodle.broker</groupId>
+        <artifactId>broker-bom</artifactId>
+        <version>${project.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>

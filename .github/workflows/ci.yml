@@ -20,8 +20,17 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
             ${{ runner.os }}-maven-
+
+      - name: Checkout doodle-broker
+        uses: actions/checkout@v3
+        with:
+          repository: project-doodle/doodle-broker
+          path: project-doodle/doodle-broker
+      - run: cd project-doodle/doodle-broker && ./mvnw install -B -U
+
       - uses: actions/checkout@v2
       - name: Check codingstyle
         run: ./mvnw spotless:check
+
       - name: Build with Maven
         run: ./mvnw clean install -B -U
