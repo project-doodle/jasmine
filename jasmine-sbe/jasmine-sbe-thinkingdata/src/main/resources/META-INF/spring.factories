@@ -1,4 +1,0 @@
-# Auto Configure
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-doodle.jasmine.sbe.thinkingdata.tga.config.TGAAutoConfiguration,\
-doodle.jasmine.sbe.thinkingdata.tga.plus.config.TGAPlusAutoConfiguration

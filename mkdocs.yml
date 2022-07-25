@@ -12,6 +12,3 @@ theme:
 
 nav:
   - Home: 'README.md'
-  - SpringBoot Enhanced:
-      - 'sbe/info.md'
-      - 'sbe/thinkingdata.md'
