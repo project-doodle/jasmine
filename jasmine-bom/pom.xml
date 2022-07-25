@@ -18,6 +18,7 @@
   <properties>
     <dep.spring-boot.version>2.5.1</dep.spring-boot.version>
     <dep.doodle-broker.version>0.0.1-SNAPSHOT</dep.doodle-broker.version>
+    <dep.doodle-groot.version>0.0.1-SNAPSHOT</dep.doodle-groot.version>
     <dep.guava.version>30.0-jre</dep.guava.version>
   </properties>
 
@@ -33,6 +34,13 @@
       <dependency>
         <groupId>doodle.broker</groupId>
         <artifactId>broker-bom</artifactId>
+        <version>${project.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>doodle.groot</groupId>
+        <artifactId>groot-bom</artifactId>
         <version>${project.version}</version>
         <type>pom</type>
         <scope>import</scope>

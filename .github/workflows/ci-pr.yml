@@ -22,9 +22,16 @@ jobs:
       - name: Checkout doodle-broker
         uses: actions/checkout@v3
         with:
-          repository: project-doodle/doodle-broker
-          path: project-doodle/doodle-broker
-      - run: cd project-doodle/doodle-broker && ./mvnw install -B -U
+          repository: project-doodle/broker
+          path: project-doodle/broker
+        - run: cd project-doodle/broker && ./mvnw install -B -U
+
+      - name: Checkout doodle-groot
+        uses: actions/checkout@v3
+        with:
+          repository: project-doodle/groot
+          path: project-doodle/groot
+      - run: cd project-doodle/groot && ./mvnw install -B -U
 
       - uses: actions/checkout@v2
       - name: Check codingstyle
