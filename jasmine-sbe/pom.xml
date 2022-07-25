@@ -20,7 +20,6 @@
   </properties>
 
   <modules>
-    <module>jasmine-sbe-info</module>
     <module>jasmine-sbe-thinkingdata</module>
   </modules>
 

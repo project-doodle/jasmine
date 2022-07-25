@@ -20,7 +20,6 @@
     <module>jasmine-starter-component-login-server</module>
     <module>jasmine-starter-component-pay-client</module>
     <module>jasmine-starter-component-pay-server</module>
-    <module>jasmine-starter-sbe-info</module>
     <module>jasmine-starter-sbe-thinkingdata</module>
     <module>jasmine-starter-workflow-console-client</module>
     <module>jasmine-starter-workflow-console-server</module>

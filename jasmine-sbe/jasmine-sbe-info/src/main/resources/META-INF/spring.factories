@@ -1,3 +1,0 @@
-# Auto Configure
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-doodle.jasmine.sbe.info.config.InfoAutoConfiguration
