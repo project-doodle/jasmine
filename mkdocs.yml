@@ -1,7 +1,7 @@
 site_name: 'Jasmine'
 repo_name: 'jasmine'
 edit_uri: 'edit/main/docs'
-site_url: 'https://project-jasmine.github.io/jasmine'
+site_url: 'https://project-doodle.github.io/jasmine'
 repo_url: 'https://github.com/project-doodle/jasmine'
 site_author: 'Tingyan Shen'
 
@@ -12,3 +12,4 @@ theme:
 
 nav:
   - Home: 'README.md'
+`
